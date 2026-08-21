@@ -1,0 +1,19 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+
+  application:
+    name: order-service
+
+  datasource:
+    url: ${ORDER_DB_URL}
+    username: ${ORDER_DB_USER}
+    password: ${ORDER_DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8082
